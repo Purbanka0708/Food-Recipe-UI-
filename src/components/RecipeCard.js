@@ -1,11 +1,11 @@
-// src/components/RecipeCard.js
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ recipe }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
-  // Check if the recipe is already bookmarked
+  
   useEffect(() => {
     const bookmarks = JSON.parse(localStorage.getItem('bookmarkedRecipes')) || [];
     setIsBookmarked(bookmarks.some(bookmark => bookmark.idMeal === recipe.idMeal));
@@ -15,10 +15,10 @@ const RecipeCard = ({ recipe }) => {
     let bookmarks = JSON.parse(localStorage.getItem('bookmarkedRecipes')) || [];
     
     if (isBookmarked) {
-      // Remove from bookmarks
+      
       bookmarks = bookmarks.filter(bookmark => bookmark.idMeal !== recipe.idMeal);
     } else {
-      // Add to bookmarks
+      
       bookmarks.push(recipe);
     }
 

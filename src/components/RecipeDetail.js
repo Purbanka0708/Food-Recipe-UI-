@@ -1,4 +1,4 @@
-// src/components/RecipeDetail.js
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const RecipeDetail = () => {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
         if (!response.ok) throw new Error('Network response was not ok');
         const result = await response.json();
-        setRecipe(result.meals[0]); // Assuming the result structure has meals
+        setRecipe(result.meals[0]); 
       } catch (error) {
         setError(error.message);
       } finally {

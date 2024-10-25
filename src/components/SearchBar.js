@@ -1,4 +1,4 @@
-// src/components/SearchBar.js
+
 import React from 'react';
 
 const SearchBar = ({ setSearchTerm }) => {
@@ -18,4 +18,4 @@ const SearchBar = ({ setSearchTerm }) => {
   );
 };
 
-export default SearchBar; // Ensure you have this line
+export default SearchBar; 

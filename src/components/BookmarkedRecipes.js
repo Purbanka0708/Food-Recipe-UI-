@@ -1,4 +1,4 @@
-// src/components/BookmarkedRecipes.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const BookmarkedRecipes = () => {
   const removeBookmark = (idMeal) => {
     const updatedBookmarks = bookmarks.filter(recipe => recipe.idMeal !== idMeal);
     localStorage.setItem('bookmarkedRecipes', JSON.stringify(updatedBookmarks));
-    window.location.reload(); // Refresh the page to update the view
+    window.location.reload(); 
   };
 
   return (
